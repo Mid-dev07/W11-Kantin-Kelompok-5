@@ -1,0 +1,175 @@
+/* ==========================================================================
+   CanteenQ / Kantin POLIJE - Panduan Pages Stylesheet
+   Used by: PanduanKantin.html, transaksi.html, ulasan.html
+   ========================================================================== */
+
+/* Panduan Overview Cards (PanduanKantin.html) */
+.panduan-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+.panduan-overview-card {
+  background-color: var(--surface);
+  border: 1px solid var(--brand-accent);
+  border-radius: var(--radius-card);
+  padding: clamp(1.5rem, 3vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.panduan-overview-card h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-h3-size);
+  font-weight: 700;
+  line-height: 1.33;
+  color: var(--text-h2);
+}
+
+.panduan-point-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1 1 auto;
+}
+
+.panduan-point-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  min-height: 44px;
+  font-size: var(--text-body-size);
+  line-height: 1.625;
+  color: var(--text-body);
+}
+
+.panduan-point-num {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  border-radius: var(--radius-btn);
+  background-color: var(--text-h2);
+  color: var(--surface);
+  font-size: var(--text-label-size);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Detail Pages (transaksi.html & ulasan.html) */
+.panduan-detail-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(2.5rem, 6vw, 6rem);
+}
+
+.tata-cara-section {
+  width: 100%;
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 3vw, 2rem);
+}
+
+.step-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.step-card {
+  background-color: var(--surface);
+  border: 1px solid var(--brand-accent);
+  border-radius: var(--radius-card);
+  padding: clamp(1.125rem, 2.5vw, 1.5rem);
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.step-badge-circle {
+  width: 3rem;
+  height: 3rem;
+  flex: 0 0 3rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--brand-accent);
+  color: var(--surface);
+  font-size: var(--text-h3-size);
+  font-weight: 700;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.step-content h3 {
+  font-size: var(--text-h3-size);
+  font-weight: 700;
+  line-height: 1.33;
+  color: var(--text-body);
+}
+
+.step-content p {
+  font-size: var(--text-body-size);
+  line-height: 1.625;
+  color: var(--text-body);
+}
+
+.back-link-wrap {
+  margin-top: 0.5rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.5rem 0.25rem;
+  font-size: var(--text-label-size);
+  font-weight: 600;
+  color: var(--text-body);
+  text-decoration: none;
+  border-radius: var(--radius-btn);
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+
+.back-link:hover {
+  color: var(--text-h2);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 760px) {
+  .panduan-overview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .step-badge-circle {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+    font-size: 1.125rem;
+  }
+
+  .step-card {
+    gap: 0.875rem;
+  }
+}

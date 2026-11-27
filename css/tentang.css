@@ -1,0 +1,253 @@
+/* ==========================================================================
+   CanteenQ / Kantin POLIJE - Tentang Kami Page Stylesheet (TentangKami.html)
+   ========================================================================== */
+
+.tentang-stack {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 6vw, 6rem);
+}
+
+.tentang-intro-group {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.75rem, 4vw, 3rem);
+}
+
+.project-intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.project-intro p {
+  font-size: var(--text-body-size);
+  line-height: 1.625;
+  color: var(--text-body);
+  max-width: 62.5rem;
+}
+
+/* Visi & Misi Grid */
+.visi-misi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+.visi-misi-card {
+  background-color: var(--surface);
+  border: 1px solid var(--brand-accent);
+  border-radius: var(--radius-card);
+  padding: clamp(1.5rem, 3vw, 2rem);
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.visi-misi-card h3 {
+  font-size: var(--text-h3-size);
+  font-weight: 700;
+  line-height: 1.33;
+  color: var(--text-h2);
+}
+
+.visi-misi-card p {
+  font-size: var(--text-body-size);
+  line-height: 1.625;
+  color: var(--text-body);
+}
+
+/* Keunggulan Section */
+.tentang-section {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 3vw, 2rem);
+}
+
+.keunggulan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.keunggulan-card {
+  background-color: var(--surface);
+  border: 1px solid var(--brand-accent);
+  border-radius: var(--radius-card);
+  padding: clamp(1.5rem, 3vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.keunggulan-number {
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--brand-accent);
+  color: var(--surface);
+  font-size: var(--text-h3-size);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.keunggulan-copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.keunggulan-copy h3 {
+  font-size: var(--text-h3-size);
+  font-weight: 700;
+  line-height: 1.33;
+  color: var(--text-h2);
+}
+
+.keunggulan-copy p {
+  font-size: var(--text-body-size);
+  line-height: 1.625;
+  color: var(--text-body);
+}
+
+/* Lokasi Section (696fr 456fr Asymmetric Grid) */
+.lokasi-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 696fr) minmax(0, 456fr);
+  gap: clamp(1.75rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.map-embed-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 696 / 420;
+  min-height: clamp(280px, 34vw, 420px);
+  background-color: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(26, 36, 34, 0.06);
+}
+
+.map-embed-frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.ilustrasi-area {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.ilustrasi-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.ilustrasi-header h3 {
+  font-size: var(--text-h3-size);
+  font-weight: 700;
+  line-height: 1.33;
+  color: var(--text-h2);
+}
+
+.ilustrasi-header p {
+  font-size: var(--text-body-size);
+  line-height: 1.625;
+  color: var(--text-body);
+}
+
+.ilustrasi-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.ilustrasi-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.ilustrasi-thumb {
+  width: 8rem;
+  height: 6rem;
+  flex: 0 0 8rem;
+  border-radius: var(--radius-btn);
+  background-color: var(--placeholder);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.ilustrasi-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ilustrasi-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  min-width: 0;
+}
+
+.ilustrasi-copy h4 {
+  font-size: var(--text-label-size);
+  font-weight: 600;
+  line-height: 1.43;
+  color: var(--text-body);
+}
+
+.ilustrasi-copy p {
+  font-size: var(--text-body-size);
+  line-height: 1.625;
+  color: var(--text-body);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints (Chrome DevTools: 320px -> 2560px 4K)
+   ========================================================================== */
+@media (max-width: 900px) {
+  .keunggulan-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lokasi-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .visi-misi-grid,
+  .keunggulan-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .visi-misi-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .ilustrasi-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .ilustrasi-thumb {
+    width: 100%;
+    height: 140px;
+    flex-basis: auto;
+  }
+}

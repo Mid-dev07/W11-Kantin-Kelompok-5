@@ -67,10 +67,13 @@ module.exports = async function handler(req, res) {
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
     errors.push("Format email tidak valid.");
   }
+  const cleanHp = values.no_hp.replace(/[\s-]/g, "");
   if (!values.no_hp) {
     errors.push("Nomor HP wajib diisi.");
-  } else if (!/^[0-9+\s()-]{8,20}$/.test(values.no_hp)) {
-    errors.push("Format nomor HP tidak valid.");
+  } else if (!/^(0\d{10,12}|\+62\d{10,12})$/.test(cleanHp)) {
+    errors.push(
+      "Nomor HP harus diawali 0 atau +62 dengan panjang 11 sampai 13 digit (+62 dihitung sebagai digit ke-1)."
+    );
   }
   if (!values.subject) errors.push("Subject wajib diisi.");
   if (!values.pesan) errors.push("Pesan wajib diisi.");

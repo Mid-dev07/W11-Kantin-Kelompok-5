@@ -1,179 +1,334 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kantin POLIJE</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak &amp; Bantuan - CanteenQ Kantin POLIJE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/kontak.css">
+  <script src="js/navbar.js" defer></script>
+  <script src="js/kontak-form.js" defer></script>
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">
-                <a href="Home.html">Kantin Polije</a>
+  <a class="skip-link" href="#konten-utama">Lewati ke konten utama</a>
+
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a href="Home.html" class="brand-link" aria-label="Beranda CanteenQ Kantin POLIJE">
+        <img
+          src="Assets/Logo/logo-canteenq-navbar.png"
+          alt="CanteenQ"
+          class="brand-logo"
+          width="200"
+          height="37"
+        >
+      </a>
+
+      <button
+        type="button"
+        class="nav-toggle"
+        data-nav-toggle
+        aria-expanded="false"
+        aria-controls="primary-nav"
+      >
+        <span class="nav-toggle-bars" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <span data-nav-toggle-label>Menu</span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Navigasi utama">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="Home.html" class="nav-link nav-link--home">
+              <span class="nav-link-text">Home</span>
+            </a>
+          </li>
+          <li class="nav-item" data-dropdown>
+            <button
+              type="button"
+              class="nav-dropdown-trigger"
+              data-dropdown-trigger
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              <span class="nav-link-text">Panduan Kantin</span>
+              <svg class="nav-chevron" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <ul class="nav-dropdown-menu" aria-label="Submenu Panduan Kantin">
+              <li><a href="transaksi.html" class="nav-dropdown-link">Panduan Transaksi</a></li>
+              <li><a href="ulasan.html" class="nav-dropdown-link">Panduan Ulasan</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="MenuStan.html" class="nav-link">
+              <span class="nav-link-text">Menu &amp; Stan</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="KontakBantuan.html" class="nav-link is-active" aria-current="page">
+              <span class="nav-link-text">Kontak &amp; Bantuan</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="TentangKami.html" class="nav-link">
+              <span class="nav-link-text">Tentang Kami</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="konten-utama" class="page-main">
+    <div class="container">
+      <div class="page-header">
+        <h1 class="page-title">Kontak &amp; Bantuan</h1>
+        <p class="page-intro">
+          Lihat contoh informasi kontak kantin kampus dan formulir pertanyaan untuk mahasiswa, dosen, dan staf. Halaman ini merupakan simulasi, bukan layanan kontak resmi.
+        </p>
+      </div>
+
+      <section class="kontak-layout" aria-label="Informasi kontak dan formulir pertanyaan">
+        <div class="kontak-info-column">
+          <a
+            href="https://wa.me/6287861448372"
+            class="kontak-card"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Hubungi langsung WhatsApp 0878-6144-8372 (buka di tab baru)"
+          >
+            <div class="kontak-card-header">
+              <span class="contact-icon-circle" aria-hidden="true">
+                <img src="Assets/Icons/whatsapp.svg" alt="" width="24" height="24">
+              </span>
+              <h3>WhatsApp</h3>
+            </div>
+            <p class="kontak-card-text">0878-6144-8372</p>
+          </a>
+
+          <a
+            href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=fdssas771@gmail.com"
+            class="kontak-card"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Kirim pesan langsung melalui Gmail ke fdssas771@gmail.com (buka di tab baru)"
+          >
+            <div class="kontak-card-header">
+              <span class="contact-icon-circle" aria-hidden="true">
+                <img src="Assets/Icons/email.svg" alt="" width="24" height="24">
+              </span>
+              <h3>Email</h3>
+            </div>
+            <p class="kontak-card-text">fdssas771@gmail.com</p>
+          </a>
+
+          <a
+            href="https://www.google.com/maps/place/Kantin+Politeknik+Negeri+Jember/@-8.1603487,113.7235083,135m/data=!3m1!1e3!4m6!3m5!1s0x2dd695b626ab03cb:0xc9b95cdabdf2146!8m2!3d-8.1604121!4d113.7235017!16s%2Fg%2F11dflb3sh2"
+            class="kontak-card"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Buka lokasi Kantin Politeknik Negeri Jember di Google Maps (buka di tab baru)"
+          >
+            <div class="kontak-card-header">
+              <span class="contact-icon-circle" aria-hidden="true">
+                <img src="Assets/Icons/lokasi.svg" alt="" width="24" height="24">
+              </span>
+              <h3>Lokasi</h3>
+            </div>
+            <p class="kontak-card-text">Buka lokasi Kantin Politeknik Negeri Jember di Google Maps.</p>
+          </a>
         </div>
-        <ul class="nav-links">
+
+        <div class="kontak-form-card">
+          <form class="kontak-form" action="/api/proses-kontak-bantuan" method="POST" novalidate data-kontak-form>
+            <div class="form-alert" role="alert" data-form-alert hidden>
+              <img src="Assets/Icons/circle-alert.svg" alt="" width="24" height="24" aria-hidden="true">
+              <span>Lengkapi semua kolom wajib sebelum mengirim.</span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field" data-default-help="Gunakan nama yang ingin ditampilkan.">
+                <label for="nama">Nama *</label>
+                <input
+                  type="text"
+                  id="nama"
+                  name="nama"
+                  placeholder="Masukkan nama Anda"
+                  autocomplete="name"
+                  required
+                >
+                <div class="field-feedback">
+                  <img src="Assets/Icons/circle-alert.svg" alt="" class="field-error-icon" width="20" height="20" aria-hidden="true">
+                  
+                </div>
+              </div>
+
+              <div class="form-field" data-default-help="Gunakan format email yang valid (contoh: nama@gmail.com).">
+                <label for="email">Email *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="contoh: nama@gmail.com"
+                  autocomplete="email"
+                  required
+                >
+                <div class="field-feedback">
+                  <img src="Assets/Icons/circle-alert.svg" alt="" class="field-error-icon" width="20" height="20" aria-hidden="true">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field" data-default-help="Awali dengan 0 atau +62, panjang 11 sampai 13 digit.">
+                <label for="no_hp">No HP *</label>
+                <input
+                  type="tel"
+                  id="no_hp"
+                  name="no_hp"
+                  placeholder="contoh: 087861448372 atau +6287861448372"
+                  autocomplete="tel"
+                  required
+                >
+                <div class="field-feedback">
+                  <img src="Assets/Icons/circle-alert.svg" alt="" class="field-error-icon" width="20" height="20" aria-hidden="true">
+                </div>
+              </div>
+
+              <div class="form-field" data-default-help="Contoh topik: informasi menu atau stan.">
+                <label for="subject">Subject *</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Tulis topik pertanyaan"
+                  required
+                >
+                <div class="field-feedback">
+                  <img src="Assets/Icons/circle-alert.svg" alt="" class="field-error-icon" width="20" height="20" aria-hidden="true">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-field" data-default-help="Sampaikan pertanyaan dengan jelas. Hindari data pribadi.">
+              <label for="pesan">Pesan Anda *</label>
+              <textarea
+                id="pesan"
+                name="pesan"
+                rows="4"
+                placeholder="Tulis pesan Anda di sini"
+                required
+              ></textarea>
+              <div class="field-feedback">
+                <img src="Assets/Icons/circle-alert.svg" alt="" class="field-error-icon" width="20" height="20" aria-hidden="true">
+                <span data-feedback-text>Sampaikan pertanyaan dengan jelas. Hindari data pribadi.</span>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-primary btn-primary--wide">
+                <span>Kirim</span>
+                <img src="Assets/Icons/arrow-right-white.svg" alt="" class="btn-arrow btn-arrow--light" width="24" height="24" aria-hidden="true">
+                <img src="Assets/Icons/arrow-right-dark.svg" alt="" class="btn-arrow btn-arrow--dark" width="24" height="24" aria-hidden="true">
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Confirmation Modal (Figma 06_Kontak_Sukses) -->
+  <div
+    id="kontak-success-modal"
+    class="modal-backdrop"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-success-title"
+    hidden
+  >
+    <div class="modal-panel">
+      <div class="modal-check-circle" aria-hidden="true">
+        <img src="Assets/Icons/circle-check.svg" alt="" width="28" height="28">
+      </div>
+      <div class="modal-copy">
+        <h2 id="modal-success-title" class="modal-title">Pesan terkirim</h2>
+        <p class="modal-text">
+          Terima kasih, pesan Anda telah dikirim melalui Gmail ke <strong>fdssas771@gmail.com</strong>.
+        </p>
+        <p class="modal-note">
+          Kami akan menindaklanjuti pertanyaan atau masukan Anda secepatnya.
+        </p>
+      </div>
+      <button type="button" class="btn-primary btn-primary--wide" data-modal-close>
+        <span>Tutup</span>
+        <img src="Assets/Icons/arrow-right-white.svg" alt="" class="btn-arrow btn-arrow--light" width="24" height="24" aria-hidden="true">
+        <img src="Assets/Icons/arrow-right-dark.svg" alt="" class="btn-arrow btn-arrow--dark" width="24" height="24" aria-hidden="true">
+      </button>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2 class="footer-title">CanteenQ</h2>
+          <div class="footer-desc">
+            <p>Kenali stan dan pilihan menu kantin kampus.</p>
+            <p>Temukan panduan transaksi langsung dan ulasan pengunjung.</p>
+            <p>Seluruh informasi dalam konsep ini menggunakan data contoh.</p>
+          </div>
+          <div class="footer-socials" aria-label="Media sosial CanteenQ">
+            <button type="button" class="social-btn" data-social="Instagram" aria-label="Instagram CanteenQ">
+              <img src="Assets/Icons/instagram.svg" alt="" width="24" height="24" aria-hidden="true">
+            </button>
+            <button type="button" class="social-btn" data-social="Facebook" aria-label="Facebook CanteenQ">
+              <img src="Assets/Icons/facebook.svg" alt="" width="24" height="24" aria-hidden="true">
+            </button>
+            <button type="button" class="social-btn" data-social="YouTube" aria-label="YouTube CanteenQ">
+              <img src="Assets/Icons/youtube.svg" alt="" width="24" height="24" aria-hidden="true">
+            </button>
+            <button type="button" class="social-btn" data-social="TikTok" aria-label="TikTok CanteenQ">
+              <img src="Assets/Icons/tiktok.svg" alt="" width="24" height="24" aria-hidden="true">
+            </button>
+          </div>
+        </div>
+
+        <nav class="footer-nav" aria-label="Navigasi footer">
+          <h2 class="footer-title">Halaman</h2>
+          <ul class="footer-links">
             <li><a href="Home.html">Home</a></li>
             <li><a href="MenuStan.html">Menu &amp; Stan</a></li>
-            <li><a href="PanduanKantin.html">Panduan Kantin</a></li>
-            <li><a href="KontakBantuan.html" class="active">Kontak Bantuan</a></li>
+            <li><a href="transaksi.html">Panduan Transaksi</a></li>
+            <li><a href="ulasan.html">Panduan Ulasan</a></li>
+            <li><a href="KontakBantuan.html">Kontak &amp; Bantuan</a></li>
             <li><a href="TentangKami.html">Tentang Kami</a></li>
-        </ul>
-    </header> 
-<main class="kb-main">
-    <div class="kb-container">
-        <!-- JUDUL HALAMAN -->
-        <div class="kb-heading">
-            <h1>Kontak &amp; Bantuan</h1>
-            <p>Butuh informasi atau memiliki pertanyaan seputar Kantin POLIJE? <br> Hubungi kami melalui kontak yang tersedia atau sampaikan pesan melalui formulir berikut.
-            </p>
-        </div>
+          </ul>
+        </nav>
+      </div>
 
-        <!-- KONTEN UTAMA -->
-        <div class="kb-content">
-            <!-- KOLOM INFORMASI KONTAK -->
-            <div class="kb-contact-list">
+      <hr class="footer-divider">
 
-                <!-- WHATSAPP -->
-                <a href="https://wa.me/6285232739306"
-                   class="kb-contact-card"
-                   target="_blank">
-                    <div class="kb-contact-title">
-                        <span class="kb-icon">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </span>
-                        <h3>WhatsApp</h3>
-                    </div>
-                    <p>0812-3456-7890</p>
-                </a>
-
-                <!-- EMAIL -->
-                <a href="mailto:contoh.email@kantinpolije.ac.id"
-                class="kb-contact-card">
-                    <div class="kb-contact-title">
-                        <span class="kb-icon">
-                            <i class="fa-regular fa-envelope"></i>
-                        </span>
-                        <h3>Email</h3>
-                    </div>
-                    <p>contoh.email@kantinpolije.ac.id</p>
-                </a>
-
-                <!-- LOKASI -->
-                <a href="https://maps.app.goo.gl/1HpsqE6XueQKxeci9"
-                   class="kb-contact-card"
-                   target="_blank">
-                    <div class="kb-contact-title">
-                        <span class="kb-icon">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </span>
-                        <h3>Lokasi</h3>
-                    </div>
-                    <p>Kantin Politeknik Negeri Jember</p>
-                </a>
-            </div>
-
-            <!-- KOLOM FORMULIR -->
-            <div class="kb-form-container">
-                <div class="kb-alert kb-info">
-                    Lengkapi formulir berikut untuk menyampaikan
-                    pertanyaan atau masukan kepada kami.
-                </div>
-
-                <form action="/api/proses-kontak-bantuan" method="POST">
-                    <!-- BARIS NAMA DAN EMAIL -->
-                    <div class="kb-form-row">
-                        <div class="kb-form-group">
-                            <label for="nama">Nama *</label>
-                            <input
-                                type="text"
-                                id="nama"
-                                name="nama"
-                                placeholder="Masukkan nama Anda"
-                                required
-                            >
-                        </div>
-                        <div class="kb-form-group">
-                            <label for="email">Email *</label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                placeholder="Masukkan alamat email"
-                                required
-                            >
-                        </div>
-                    </div>
-
-                    <!-- BARIS NOMOR HP DAN SUBJECT -->
-                    <div class="kb-form-row">
-                        <div class="kb-form-group">
-                            <label for="no_hp">No. HP *</label>
-                            <input
-                                type="tel"
-                                id="no_hp"
-                                name="no_hp"
-                                placeholder="Masukkan nomor HP"
-                                required
-                            >
-                        </div>
-
-                        <div class="kb-form-group">
-                            <label for="subject">Subject *</label>
-                            <input
-                                type="text"
-                                id="subject"
-                                name="subject"
-                                placeholder="Tulis Subject "
-                                required
-                            >
-                        </div>
-                    </div>
-
-                    <!-- KOLOM PESAN -->
-                    <div class="kb-form-group kb-message-group">
-                        <label for="pesan">Pesan Anda *</label>
-                        <textarea
-                            id="pesan"
-                            name="pesan"
-                            placeholder="Tulis pesan Anda di sini"
-                            required
-                        ></textarea>
-                    </div>
-
-                    <!-- TOMBOL KIRIM -->
-                    <button type="submit" class="kb-submit">
-                        Kirim
-                        <span>→</span>
-                    </button>
-                </form>
-            </div>
-        </div>
+      <div class="footer-bottom">
+        <img
+          src="Assets/Logo/logo-polije-blu-jti.png"
+          alt="Logo Politeknik Negeri Jember, BLU, dan Jurusan Teknologi Informasi"
+          class="footer-institution-logo"
+          width="324"
+          height="50"
+          loading="lazy"
+        >
+        <p class="footer-copyright">&copy; CanteenQ. Seluruh hak cipta dilindungi.</p>
+      </div>
     </div>
-</main>
-
-     <footer id="Tentang-Kami" class="footer">
-        <div class="footer-container">
-            <div class="footer-col main-col">
-                <h3>Kantin</h3>
-                <p>Nikmati kemudahan melihat menu kantin kampus. Pengalaman praktis untuk pengunjung dan pedagang.</p>
-                <div class="social-icons">
-                    <a href="www.facebook.com"><span class="fab fa-facebook-f"></span></a>
-                    <a href="www.twitter.com"><span class="fab fa-twitter"></span></a>
-                    <a href="www.instagram.com"><span class="fab fa-instagram"></span></a>
-                </div>
-            </div>
-            <div class="footer-col link-col">
-                <h3>Halaman</h3>
-                <ul>
-                    <li><a href="Home.html">Home</a></li>
-                    <li><a href="MenuStan.html">Menu & Stan</a></li>
-                    <li><a href="PanduanKantin.html">Panduan Kantin</a></li>
-                    <li><a href="KontakBantuan.html">Kontak Bantuan</a></li>
-                    <li><a href="TentangKami.html">Tentang Kami</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+  </footer>
 </body>
 </html>

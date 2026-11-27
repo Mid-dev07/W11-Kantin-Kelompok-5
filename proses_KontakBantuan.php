@@ -24,11 +24,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error[] = "Format email tidak valid.";
     }
 
-    // Validasi nomor HP
+    // Validasi nomor HP (awalan 0 atau +62 sebagai digit ke-1, 11 sampai 13 digit)
+    $clean_hp = preg_replace('/[\s-]+/', '', $no_hp);
     if (empty($no_hp)) {
         $error[] = "Nomor HP wajib diisi.";
-    } elseif (!preg_match("/^[0-9+\s()-]{8,20}$/", $no_hp)) {
-        $error[] = "Format nomor HP tidak valid.";
+    } elseif (!preg_match('/^(0\d{10,12}|\+62\d{10,12})$/', $clean_hp)) {
+        $error[] = "Nomor HP harus diawali 0 atau +62 dengan panjang 11 sampai 13 digit (+62 dihitung sebagai digit ke-1).";
     }
 
     // Validasi subject

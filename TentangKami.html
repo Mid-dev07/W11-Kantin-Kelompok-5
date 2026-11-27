@@ -1,147 +1,258 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentang Kami - KANTIN POLIJE</title>
-    <!-- Menghubungkan file CSS -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami - CanteenQ Kantin POLIJE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/tentang.css">
+  <script src="js/navbar.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#konten-utama">Lewati ke konten utama</a>
 
-    <!-- Header Navigation -->
-    <header class="navbar">
-        <div class="logo">
-                <a href="Home.html">Kantin Polije</a>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a href="Home.html" class="brand-link" aria-label="Beranda CanteenQ Kantin POLIJE">
+        <img
+          src="Assets/Logo/logo-canteenq-navbar.png"
+          alt="CanteenQ"
+          class="brand-logo"
+          width="200"
+          height="37"
+        >
+      </a>
+
+      <button
+        type="button"
+        class="nav-toggle"
+        data-nav-toggle
+        aria-expanded="false"
+        aria-controls="primary-nav"
+      >
+        <span class="nav-toggle-bars" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <span data-nav-toggle-label>Menu</span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Navigasi utama">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="Home.html" class="nav-link nav-link--home">
+              <span class="nav-link-text">Home</span>
+            </a>
+          </li>
+          <li class="nav-item" data-dropdown>
+            <button
+              type="button"
+              class="nav-dropdown-trigger"
+              data-dropdown-trigger
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              <span class="nav-link-text">Panduan Kantin</span>
+              <svg class="nav-chevron" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <ul class="nav-dropdown-menu" aria-label="Submenu Panduan Kantin">
+              <li><a href="transaksi.html" class="nav-dropdown-link">Panduan Transaksi</a></li>
+              <li><a href="ulasan.html" class="nav-dropdown-link">Panduan Ulasan</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="MenuStan.html" class="nav-link">
+              <span class="nav-link-text">Menu &amp; Stan</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="KontakBantuan.html" class="nav-link">
+              <span class="nav-link-text">Kontak &amp; Bantuan</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="TentangKami.html" class="nav-link is-active" aria-current="page">
+              <span class="nav-link-text">Tentang Kami</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="konten-utama" class="page-main">
+    <div class="container tentang-stack">
+      <!-- 1. Pengantar & Visi Misi -->
+      <section class="tentang-intro-group" aria-labelledby="tentang-heading">
+        <h1 id="tentang-heading" class="page-title">Tentang Kami</h1>
+
+        <div class="project-intro">
+          <h2 class="section-heading section-heading--accent">Kantin Polije</h2>
+          <p>
+            KANTIN Polije adalah konsep situs informasi kantin untuk tugas kuliah workshop, bagi mahasiswa, dosen, dan staf. Temukan menu, harga, jam operasional, serta panduan sebelum berkunjung. Pembelian dilakukan langsung di stan, bukan melalui situs ini. Konsep ini bukan layanan atau kebijakan resmi Polije.
+          </p>
         </div>
-        <ul class="nav-links">
+
+        <div class="visi-misi-grid">
+          <article class="visi-misi-card">
+            <h3>Visi</h3>
+            <p>
+              Membuat informasi menu dan jam operasional kantin mudah ditemukan agar pengunjung dapat mengenali pilihan sebelum datang.
+            </p>
+          </article>
+
+          <article class="visi-misi-card">
+            <h3>Misi</h3>
+            <p>
+              Mengumpulkan informasi menu dan jam operasional; menampilkan panduan pembelian langsung dan ulasan; serta menyediakan kanal kontak yang jelas.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 2. Keunggulan -->
+      <section class="tentang-section" aria-labelledby="keunggulan-heading">
+        <h2 id="keunggulan-heading" class="section-heading section-heading--accent">Keunggulan</h2>
+
+        <div class="keunggulan-grid">
+          <article class="keunggulan-card">
+            <span class="keunggulan-number" aria-hidden="true">1</span>
+            <div class="keunggulan-copy">
+              <h3>Menu mudah dibandingkan</h3>
+              <p>
+                Nama menu dan harga dikelompokkan per stan agar kamu lebih mudah membandingkan pilihan.
+              </p>
+            </div>
+          </article>
+
+          <article class="keunggulan-card">
+            <span class="keunggulan-number" aria-hidden="true">2</span>
+            <div class="keunggulan-copy">
+              <h3>Panduan sebelum datang</h3>
+              <p>
+                Kenali langkah pembelian langsung di stan dan cara menyampaikan ulasan setelah mencoba menu.
+              </p>
+            </div>
+          </article>
+
+          <article class="keunggulan-card">
+            <span class="keunggulan-number" aria-hidden="true">3</span>
+            <div class="keunggulan-copy">
+              <h3>Informasi dalam satu tempat</h3>
+              <p>
+                Temukan jam operasional, bantuan, dan informasi lokasi kantin tanpa berpindah-pindah sumber.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3. Lokasi -->
+      <section id="lokasi" class="tentang-section" aria-labelledby="lokasi-heading">
+        <h2 id="lokasi-heading" class="section-heading section-heading--accent">Lokasi</h2>
+
+        <div class="lokasi-grid">
+          <div class="map-embed-card">
+            <iframe
+              class="map-embed-frame"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800!2d113.7235017!3d-8.1604121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd695b626ab03cb%3A0xc9b95cdabdf2146!2sKantin%20Politeknik%20Negeri%20Jember!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+              title="Peta Lokasi Kantin Politeknik Negeri Jember di Google Maps"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          <div class="ilustrasi-area">
+            <div class="ilustrasi-header">
+              <h3>Ilustrasi area kantin</h3>
+              <p>
+                Kantin Politeknik Negeri Jember berlokasi di kawasan kampus Jl. Mastrip, Sumbersari, Jember. Gambaran di bawah merupakan ilustrasi singkat area layanan kantin.
+              </p>
+            </div>
+
+            <div class="ilustrasi-list">
+              <div class="ilustrasi-item">
+                <div class="ilustrasi-thumb" role="img" aria-label="Placeholder ilustrasi area stan"></div>
+                <div class="ilustrasi-copy">
+                  <h4>Area stan</h4>
+                  <p>Ilustrasi area untuk melihat menu dan membeli langsung di stan.</p>
+                </div>
+              </div>
+
+              <div class="ilustrasi-item">
+                <div class="ilustrasi-thumb" role="img" aria-label="Placeholder ilustrasi tempat duduk"></div>
+                <div class="ilustrasi-copy">
+                  <h4>Tempat duduk</h4>
+                  <p>Ilustrasi area untuk menikmati makanan setelah membeli di stan.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2 class="footer-title">CanteenQ</h2>
+          <div class="footer-desc">
+            <p>Kenali stan dan pilihan menu kantin kampus.</p>
+            <p>Temukan panduan transaksi langsung dan ulasan pengunjung.</p>
+            <p>Seluruh informasi dalam konsep ini menggunakan data contoh.</p>
+          </div>
+          <div class="footer-socials" aria-label="Media sosial CanteenQ">
+            <button type="button" class="social-btn" data-social="Instagram" aria-label="Instagram CanteenQ">
+              <img src="Assets/Icons/instagram.svg" alt="" width="24" height="24" aria-hidden="true">
+            </button>
+            <button type="button" class="social-btn" data-social="Facebook" aria-label="Facebook CanteenQ">
+              <img src="Assets/Icons/facebook.svg" alt="" width="24" height="24" aria-hidden="true">
+            </button>
+            <button type="button" class="social-btn" data-social="YouTube" aria-label="YouTube CanteenQ">
+              <img src="Assets/Icons/youtube.svg" alt="" width="24" height="24" aria-hidden="true">
+            </button>
+            <button type="button" class="social-btn" data-social="TikTok" aria-label="TikTok CanteenQ">
+              <img src="Assets/Icons/tiktok.svg" alt="" width="24" height="24" aria-hidden="true">
+            </button>
+          </div>
+        </div>
+
+        <nav class="footer-nav" aria-label="Navigasi footer">
+          <h2 class="footer-title">Halaman</h2>
+          <ul class="footer-links">
             <li><a href="Home.html">Home</a></li>
             <li><a href="MenuStan.html">Menu &amp; Stan</a></li>
-            <li><a href="PanduanKantin.html">Panduan Kantin</a></li>
-            <li><a href="KontakBantuan.html">Kontak Bantuan</a></li>
-            <li><a href="TentangKami.html" class="active">Tentang Kami</a></li>
-        </ul>
-    </header>
+            <li><a href="transaksi.html">Panduan Transaksi</a></li>
+            <li><a href="ulasan.html">Panduan Ulasan</a></li>
+            <li><a href="KontakBantuan.html">Kontak &amp; Bantuan</a></li>
+            <li><a href="TentangKami.html">Tentang Kami</a></li>
+          </ul>
+        </nav>
+      </div>
 
-    <!-- Main Content Page -->
-    <main class="page">
-        <div class="container">
-            
-            <!-- Header Section (Judul & Deskripsi) -->
-            <h1>Tentang Kami</h1>
-            <h2>Kantin Polije</h2>
-            <p class="intro">
-            adalah konsep situs informasi kantin untuk simulasi/demo bagi mahasiswa, dosen, dan staf. Temukan menu, harga, jam operasional, serta panduan sebelum berkunjung. Pembelian dilakukan langsung di tempat, bukan melalui situs ini. Konsep ini bukan bagian resmi dari kampus Polije.
-            </p>
+      <hr class="footer-divider">
 
-            <!-- Grid Visi & Misi -->
-            <div class="guide-grid section-margin">
-                <div class="guide-card">
-                    <h2>Visi</h2>
-                    <p class="visi-misi-text">
-                        Membuat informasi menu dan operasional kantin mudah ditemukan agar pengunjung dapat merencanakan sebelum datang.
-                    </p>
-                </div>
-                <div class="guide-card">
-                    <h2>Misi</h2>
-                    <p class="visi-misi-text">
-                        Mengumpulkan informasi menu dan operasional, menampilkan simulasi pembelian langsung di tempat, serta menyediakan kanal kontak yang jelas.
-                    </p>
-                </div>
-            </div>
-
-           <!-- Bagian Keunggulan -->
-<div class="steps-wrap section-margin">
-    <!-- Cukup tambahkan class text-center di sini -->
-    <h2 class="section-title text-center">Keunggulan</h2>
-    
-    <div class="keunggulan-grid">
-        <div class="step-card keunggulan-card">
-            <div class="step-number">1</div>
-            <h3>Menu mudah dibandingkan</h3>
-            <p>Nama menu dan harga disajikan transparan agar kamu lebih mudah memilih opsi pilihan.</p>
-        </div>
-
-        <div class="step-card keunggulan-card">
-            <div class="step-number">2</div>
-            <h3>Panduan sebelum datang</h3>
-            <p>Petunjuk langkah pembelian langsung di area kantin serta menyampaiakan ulasan setelah mengonsumsi.</p>
-        </div>
-
-        <div class="step-card keunggulan-card">
-            <div class="step-number">3</div>
-            <h3>Informasi dalam satu tempat</h3>
-            <p>Temukan jam operasional, bantuan, dan informasi tentang kantin tanpa berpindah-pindah sumber.</p>
-        </div>
+      <div class="footer-bottom">
+        <img
+          src="Assets/Logo/logo-polije-blu-jti.png"
+          alt="Logo Politeknik Negeri Jember, BLU, dan Jurusan Teknologi Informasi"
+          class="footer-institution-logo"
+          width="324"
+          height="50"
+          loading="lazy"
+        >
+        <p class="footer-copyright">&copy; CanteenQ. Seluruh hak cipta dilindungi.</p>
+      </div>
     </div>
-</div>
-
-            <!-- Bagian Lokasi & Ilustrasi Area Kantin -->
-            <div class="section-margin">
-                <h2 class="section-title">Lokasi</h2>
-                <div class="lokasi-grid">
-                    
-                    <!-- Box Peta/Placeholder Lokasi -->
-                    <div class="video-placeholder peta-box">
-                        <a href="https://maps.app.goo.gl/1HpsqE6XueQKxeci9" class="video-placeholder peta-box" target="_blank" rel="noopener">
-                        <div class="pin-icon">📍</div>
-                        <p class="peta-text">Peta lokasi atau rute rintisan</p>
-                        </a>
-                    </div>
-
-                    <!-- Box Deskripsi Ilustrasi -->
-                    <div class="ilustrasi-box">
-                        <h3 class="ilustrasi-title">Ilustrasi area kantin</h3>
-                        <p class="ilustrasi-desc">Gambar dan peta berikut hanya ilustrasi. Peta sebenarnya akan ditambahkan setelah lokasi dikonfirmasi.</p>
-
-                        <div class="ilustrasi-item" style="margin-bottom: 12px;">
-                            <div class="ilustrasi-img"></div>
-                            <div>
-                                <h4>Area Stand</h4>
-                                <p>Tempat memesan dan melihat menu dan membeli langsung di tempat.</p>
-                            </div>
-                        </div>
-
-                        <div class="ilustrasi-item">
-                            <div class="ilustrasi-img"></div>
-                            <div>
-                                <h4>Tempat Duduk</h4>
-                                <p>Fasilitas area untuk menikmati makanan setelah membeli di stand.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer id="Tentang-Kami" class="footer">
-        <div class="footer-container">
-            <div class="footer-col main-col">
-                <h3>Kantin</h3>
-                <p>Nikmati kemudahan melihat menu kantin kampus. Pengalaman praktis untuk pengunjung dan pedagang.</p>
-                <div class="social-icons">
-                    <a href="www.facebook.com"><span class="fab fa-facebook-f"></span></a>
-                    <a href="www.twitter.com"><span class="fab fa-twitter"></span></a>
-                    <a href="www.instagram.com"><span class="fab fa-instagram"></span></a>
-                </div>
-            </div>
-            <div class="footer-col link-col">
-                <h3>Halaman</h3>
-                <ul>
-                    <li><a href="Home.html">Home</a></li>
-                    <li><a href="MenuStan.html">Menu & Stan</a></li>
-                    <li><a href="PanduanKantin.html">Panduan Kantin</a></li>
-                    <li><a href="KontakBantuan.html">Kontak Bantuan</a></li>
-                    <li><a href="TentangKami.html">Tentang Kami</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-
+  </footer>
 </body>
 </html>
